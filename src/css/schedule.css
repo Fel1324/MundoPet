@@ -1,0 +1,33 @@
+.schedule{
+  display: grid;
+  gap: .75rem;
+  margin-top: 2rem;
+}
+
+.schedule-period{
+  background-color: var(--background-tertiary);
+  border-radius: .625rem;
+
+  & > header{
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+
+    padding: .75rem 1.25rem;
+    border-bottom: .0625rem solid #2E2C30;
+
+    & > h2{
+      font: var(--label-lg);
+      margin-right: auto;
+    }
+
+    & > span{
+      font: var(--label-lg);
+      color: var(--content-secondary);
+    }
+  }
+}
+
+.period{
+  padding: 1.25rem;
+}
