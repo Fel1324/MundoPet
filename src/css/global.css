@@ -1,0 +1,72 @@
+@import url("./header.css");
+@import url("./form/inputs.css");
+@import url("./form/modal.css");
+
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --content-primary: #FFFFFF;
+  --content-secondary: #98959D;
+  --content-tertiary: #666666;
+  --content-brand: #9282FA;
+  --background-primary: #151515;
+  --background-secondary: #1E1E1E;
+  --background-tertiary: #23242C;
+  --background-brand: #9282FA;
+  --background-highlights: #BDB4FA;
+  --border-primary: #3E3C41;
+  --border-secondary: #86818C;
+  --border-brand: #9282FA;
+  --border-divisor: #353339;
+  --accent-blue: #027DF0;
+  --accent-blue-light: #16487A;
+  --accent-yellow: #F0DC02;
+  --accent-yellow-light: #756E1B;
+  --accent-orange: #F09102;
+  --accent-orange-light: #75501B;
+
+  --ff-base: "Inter", sans-serif;
+
+  --title: 700 1.5rem/2rem "Inter Tight", sans-serif;
+  --p-md: 500 .875rem/1.5rem var(--ff-base);
+  --p-sm: 500 .75rem/1rem var(--ff-base);
+  --label-lg: 700 1rem/1.5rem var(--ff-base);
+  --label-md: 700 .875rem/1.5rem var(--ff-base);
+  --label-sm: 700 .75rem/1rem var(--ff-base);
+  --link: 500 .75rem/1rem var(--ff-base);
+}
+
+html, body{
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+
+  background-color: #14151D;
+  color: var(--content-primary);
+  font: var(--p-md);
+}
+
+a{
+  font: var(--link);
+  text-decoration: none;
+}
+
+img{
+  vertical-align: top;
+}
+
+/* --- */
+#app{
+  margin: .75rem auto 0;
+  padding: .75rem 1.25rem;
+
+  width: 100%;
+  max-width: 54.5rem;
+}

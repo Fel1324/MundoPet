@@ -1,0 +1,29 @@
+.label{
+  display: block;
+  font: var(--label-md);
+  margin-bottom: .25rem;
+}
+
+.input-date{
+  outline: .0625rem solid var(--border-primary);
+  border-radius: .5rem;
+  padding-inline: .75rem;
+  width: fit-content;
+  height: 3rem;
+
+  display: flex;
+  align-items: center;
+  gap: .625rem;
+
+  & > input{
+    all: unset;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--content-secondary);
+  }
+}
+
+::-webkit-calendar-picker-indicator{
+  cursor: pointer;
+  background: url("../../assets/icons/arrow-down.svg") no-repeat center;
+}
