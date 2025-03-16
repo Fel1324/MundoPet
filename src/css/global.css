@@ -60,6 +60,10 @@ a{
   text-decoration: none;
 }
 
+ul{
+  list-style-type: none;
+}
+
 img{
   vertical-align: top;
 }

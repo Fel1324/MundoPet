@@ -1,7 +1,11 @@
 .schedule{
   display: grid;
-  gap: .75rem;
+  gap: .875rem;
   margin-top: 2rem;
+
+  & > :last-child{
+    margin-bottom: 6.25rem;
+  }
 }
 
 .schedule-period{
@@ -29,5 +33,43 @@
 }
 
 .period{
+  display: flex;
+  flex-direction: column;
   padding: 1.25rem;
+
+  & > li{
+    padding: .75rem;
+
+    & > strong{
+      font: var(--label-md);
+      
+      &.hour{
+        margin-right: .75rem;
+      }
+    }
+
+    & > span{
+      font: var(--p-md);
+      color: var(--content-secondary);
+
+      &.service-desc{
+        display: block;
+        margin-bottom: .5rem;
+      }
+    }
+
+    & > .remove{
+      display: block;
+      font: var(--p-sm);
+      margin-left: auto;
+
+      background: none;
+      color: var(--content-tertiary);
+    }
+  }
+
+  & > li + li{
+    border-top: .0625rem solid var(--border-divisor);
+    padding-top: 1.75rem;
+  }
 }
