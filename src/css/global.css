@@ -52,8 +52,6 @@ html, body{
   background-color: #14151D;
   color: var(--content-primary);
   font-family: var(--ff-base);
-
-  overflow: hidden;
 }
 
 p{
