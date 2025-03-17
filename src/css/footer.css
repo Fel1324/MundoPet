@@ -8,19 +8,3 @@
   left: 0;
   bottom: 0;
 }
-
-.new-schedule{
-  box-shadow: 0 0 2.5rem rgba(146, 130, 250, 0.3);
-  background-color: var(--content-brand);
-  border-radius: 8px;
-  color: #050505;
-
-  font: var(--label-lg);
-  text-transform: uppercase;
-  padding: .75rem 1.5rem;
-
-  transition: background-color .3s ease-in-out;
-  &:hover{
-    background-color: var(--background-highlights);
-  }
-}

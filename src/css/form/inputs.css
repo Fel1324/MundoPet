@@ -1,14 +1,19 @@
+.input-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .label{
   display: block;
   font: var(--label-md);
   margin-bottom: .25rem;
 }
 
-.input-date{
+.input{
   outline: .0625rem solid var(--border-primary);
   border-radius: .5rem;
   padding-inline: .75rem;
-  width: fit-content;
   height: 3rem;
 
   display: flex;
@@ -17,9 +22,53 @@
 
   & > input{
     all: unset;
+    width: 100%;
+    color: var(--content-secondary);
+
     font-size: 1rem;
     font-weight: 400;
-    color: var(--content-secondary);
+  }
+
+  &:hover{
+    outline-color: var(--border-secondary);
+  }
+  
+  &:focus-within{
+    outline-color: var(--border-brand);
+  }
+}
+
+.input-date{
+  width: fit-content;
+}
+
+.textarea-group{
+  height: 6rem;
+}
+
+textarea{
+  outline: .0625rem solid var(--border-primary);
+  border-radius: .5rem;
+  background: transparent;
+  resize: none;
+
+  width: 100%;
+  padding: .75rem;
+
+  color: var(--content-secondary);
+  font-size: 1rem;
+  font-weight: 400;
+
+  &::placeholder{
+    font-family: var(--ff-base);
+  }
+
+  &:hover{
+    outline-color: var(--border-secondary);
+  }
+
+  &:focus{
+    outline-color: var(--border-brand);
   }
 }
 

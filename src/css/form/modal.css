@@ -1,0 +1,39 @@
+#modal{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.01);
+  backdrop-filter: blur(.375rem);
+
+  padding: 4.75rem 1.25rem 2rem;
+}
+
+#form{
+  background-color: var(--background-tertiary);
+  border-radius: .75rem;
+
+  height: 100%;
+  max-width: 29.875rem;
+  overflow-y: auto;
+
+  padding: 2.5rem 1.25rem;
+  margin: 0 auto;
+
+  & > header > p{
+    margin-top: .25rem;
+  }
+}
+
+.form-group{
+  display: grid;
+  gap: 1rem;
+  margin-block: 1.75rem;
+}
+
+button[type="submit"]{
+  display: block;
+  margin-left: auto;
+}

@@ -65,6 +65,11 @@
 
       background: none;
       color: var(--content-tertiary);
+
+      &:hover{
+        color: var(--content-primary);
+        text-decoration: underline;
+      }
     }
   }
 

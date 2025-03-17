@@ -1,10 +1,5 @@
 .header{
-  & > h1{
-    font: var(--title);
-  }
-
   & > p{
-    color: var(--content-secondary);
     margin-block: .25rem .75rem;
   }
 }
