@@ -1,3 +1,4 @@
-// "use strict";
+"use strict";
 
-// import "../css/global.css";
+// Styles
+import "../css/global.css";
