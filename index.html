@@ -14,10 +14,11 @@
 
     <div id="app">
       <header class="header">
-        <h1>Sua agenda</h1>
-        <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+        <div>
+          <h1>Sua agenda</h1>
+          <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+        </div>
 
-        <label class="label" for="date">Data</label>
         <div class="input input-date">
           <img src="./src/assets/icons/calendar.svg" alt="">
           <input type="date" name="date" id="date" required>
@@ -145,7 +146,7 @@
               <label class="label" for="hours">Hora</label>
               <div class="input">
                 <img src="./src/assets/icons/clock.svg" alt="">
-                <input type="time" name="hours" id="hours" min="09:00" required>
+                <input type="time" name="hours" id="hours" min="08:00" max="18:00" required>
               </div>
             </div>
           </div>

@@ -1,6 +1,5 @@
 .input-wrapper{
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 1rem;
 }
 
@@ -56,8 +55,7 @@ textarea{
   padding: .75rem;
 
   color: var(--content-secondary);
-  font-size: 1rem;
-  font-weight: 400;
+  font: 400 1rem/1.5 var(--ff-base);
 
   &::placeholder{
     font-family: var(--ff-base);
@@ -75,4 +73,10 @@ textarea{
 ::-webkit-calendar-picker-indicator{
   cursor: pointer;
   background: url("../../assets/icons/arrow-down.svg") no-repeat center;
+}
+
+@media screen and (width >= 1024px) {
+  .input-wrapper{
+    grid-template-columns: 1fr 1fr;
+  }
 }

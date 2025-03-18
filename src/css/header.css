@@ -1,5 +1,13 @@
 .header{
-  & > p{
+  & p{
     margin-block: .25rem .75rem;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }

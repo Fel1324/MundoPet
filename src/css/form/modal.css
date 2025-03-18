@@ -53,3 +53,13 @@ button[type="submit"]{
   display: block;
   margin-left: auto;
 }
+
+@media screen and (width >= 1024px) {
+  #modal{
+    padding-block: 4.5rem;
+  }
+
+  #form{
+    padding-inline: 2.5rem;
+  }
+}
