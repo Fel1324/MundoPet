@@ -37,10 +37,10 @@
   flex-direction: column;
   padding: 1.25rem;
 
-  & > li{
+  & li{
     padding: .75rem;
 
-    & > strong{
+    & strong{
       font: var(--label-md);
       
       &.hour{
@@ -48,7 +48,7 @@
       }
     }
 
-    & > span{
+    & span{
       font: var(--p-md);
       color: var(--content-secondary);
 
@@ -58,7 +58,7 @@
       }
     }
 
-    & > .remove{
+    & .remove{
       display: block;
       font: var(--p-sm);
       margin-left: auto;
@@ -82,5 +82,21 @@
 @media screen and (width >= 1024px) {
   .schedule > :last-child{
     margin-bottom: 0;
+  }
+
+  .period li{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    & span.service-desc{
+      margin-bottom: 0;
+      margin-left: 4rem;
+      justify-self: flex-start;
+    }
+
+    & .remove{
+      margin: initial;
+      justify-self: flex-end;
+    }
   }
 }

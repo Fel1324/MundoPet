@@ -1,3 +1,12 @@
+.input-date{
+  width: fit-content;
+}
+
+::-webkit-calendar-picker-indicator{
+  cursor: pointer;
+  background: url("../../assets/icons/arrow-down.svg") no-repeat center;
+}
+
 .input-wrapper{
   display: grid;
   gap: 1rem;
@@ -37,10 +46,6 @@
   }
 }
 
-.input-date{
-  width: fit-content;
-}
-
 .textarea-group{
   height: 6rem;
 }
@@ -70,9 +75,36 @@ textarea{
   }
 }
 
-::-webkit-calendar-picker-indicator{
-  cursor: pointer;
-  background: url("../../assets/icons/arrow-down.svg") no-repeat center;
+.select{
+  position: relative;
+
+  & > select{
+    appearance: none;
+    color: var(--content-secondary);
+    background-color: transparent;
+    outline: none;
+
+    font-size: 1rem;
+    font-weight: 400;
+
+    position: absolute;
+    left: 2.625rem;
+    z-index: 1;
+    width: calc(100% - 3.375rem);
+    height: 3rem;
+  }
+
+  &::after{
+    content: "";
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+  
+    background: url("../../assets/icons/arrow-down.svg") no-repeat center / contain;
+    position: absolute;
+    right: .75rem;
+  }
+  
 }
 
 @media screen and (width >= 1024px) {

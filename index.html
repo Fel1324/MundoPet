@@ -34,15 +34,17 @@
           </header>
 
           <ul role="list" id="morning" class="period">
-            <li>
-              <strong class="hour">09:00</strong>
-              <strong>Thor</strong>
+            <!-- <li>
+              <div>
+                <strong class="hour">09:00</strong>
+                <strong>Thor</strong>
+                <span>/ Fernanda Costa</span>
+              </div>
             
-              <span>/ Fernanda Costa</span>
               <span class="service-desc">Vacinação</span>
 
               <button class="remove">Remover agendamento</button>
-            </li>
+            </li> -->
           </ul>
         </section>
 
@@ -54,15 +56,17 @@
           </header>
 
           <ul role="list" id="afternoon" class="period">
-            <li>
-              <strong class="hour">13:00</strong>
-              <strong>Mel</strong>
+            <!-- <li>
+              <div>
+                <strong class="hour">13:00</strong>
+                <strong>Mel</strong>
+                <span>/ João Souza</span>
+              </div>
             
-              <span>/ João Souza</span>
               <span class="service-desc">Corte de Unhas</span>
 
               <button class="remove">Remover agendamento</button>
-            </li>
+            </li> -->
           </ul>
         </section>
 
@@ -74,15 +78,17 @@
           </header>
 
           <ul role="list" id="night" class="period">
-            <li>
-              <strong class="hour">20:00</strong>
-              <strong>Max</strong>
+            <!-- <li>
+              <div>
+                <strong class="hour">20:00</strong>
+                <strong>Max</strong>
+                <span>/ Camila Santos</span>
+              </div>
             
-              <span>/ Camila Santos</span>
               <span class="service-desc">Limpeza de Dentes</span>
 
               <button class="remove">Remover agendamento</button>
-            </li>
+            </li> -->
           </ul>
         </section>
       </main>
@@ -130,7 +136,7 @@
 
           <div class="textarea-group">
             <label class="label" for="description">Descrição do serviço</label>
-            <textarea name="description" id="description" placeholder="Banho e tosa" required></textarea>
+            <textarea name="description" id="description" placeholder="Banho e tosa" maxlength="72" required></textarea>
           </div>
 
           <div class="input-wrapper">
@@ -144,9 +150,21 @@
 
             <div class="input-group">
               <label class="label" for="hours">Hora</label>
-              <div class="input">
+              <div class="input select">
                 <img src="./src/assets/icons/clock.svg" alt="">
-                <input type="time" name="hours" id="hours" min="08:00" max="18:00" required>
+                 <select name="hours" id="hours">
+                  <option value="08:00">08:00</option>
+                  <option value="09:00">09:00</option>
+                  <option value="10:00">10:00</option>
+                  <option value="11:00">11:00</option>
+                  <option value="12:00">12:00</option>
+                  <option value="13:00">13:00</option>
+                  <option value="14:00">14:00</option>
+                  <option value="15:00">15:00</option>
+                  <option value="16:00">16:00</option>
+                  <option value="17:00">17:00</option>
+                  <option value="18:00">18:00</option>
+                 </select>
               </div>
             </div>
           </div>
