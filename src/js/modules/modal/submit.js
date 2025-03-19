@@ -1,10 +1,8 @@
 import dayjs from "dayjs";
-import { verifyData } from "./verify-data";
-import { newSchedule } from "../../services/new-schedule";
 
-const form = document.querySelector("#form");
 const date = document.querySelector("#date");
 
+const form = document.querySelector("#form");
 const tutorName = document.querySelector("#tutor-name");
 const petName = document.querySelector("#pet-name");
 const serviceDescription = document.querySelector("#description");
@@ -29,23 +27,22 @@ form.onsubmit = async (event) => {
     if(tutor === "" || pet === "" || desc === "") return alert("Preencha todos os campos!");
 
     const hourSelected = hours.value;
-    const [hour] = hourSelected.split(":");
-    const when = dayjs(dateModal.value).add(hour, "hour");
-
-    const id = new Date().getTime().toString();
     
-    const {isHourPast, unavailableHour} = verifyData(when);
-    if(isHourPast){
-      alert(`O horário das ${unavailableHour} está indisponível! Por favor, selecione outro horário!`);
-      return;
+    if(hourSelected === "Selecione a hora" || !hourSelected){
+      return alert("Selecione a hora!");
     }
 
-    await newSchedule({
+    const [hour] = hourSelected.split(":");
+    const when = dayjs(dateModal.value).add(hour, "hour");
+    
+    const id = new Date().getTime().toString();
+
+    console.log({
       id,
       tutor,
       pet,
       desc,
-      when: dayjs(when).format("HH:mm"),
+      when,
     });
 
   } catch (error) {
