@@ -86,11 +86,10 @@
 
   .period li{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1.55fr 1fr 1fr;
 
     & span.service-desc{
       margin-bottom: 0;
-      margin-left: 4rem;
       justify-self: flex-start;
     }
 

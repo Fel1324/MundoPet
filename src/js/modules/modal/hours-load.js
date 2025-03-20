@@ -3,16 +3,20 @@ import { openingHours } from "../../utils/opening-hours.js";
 
 const hours = document.querySelector("#hours");
 
-export function hoursLoad(date){
-  hours.innerHTML = "<option hidden>Selecione a hora</option>";
+export function hoursLoad(date, dailySchedules){
+  hours.innerHTML = "<option hidden>00:00</option>";
+
+  const unavailableHours = dailySchedules.map(schedule => dayjs(schedule.when).format("HH:mm"))
 
   const opening = openingHours.map(hour => {
     const [scheduleHour] = hour.split(":");
     const isHourPast = dayjs(date).add(scheduleHour, "hour").isBefore(dayjs());
 
+    const available = unavailableHours.includes(hour) || isHourPast;
+
     return{
       hour,
-      available: isHourPast,
+      available,
     }
   });
 

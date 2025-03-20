@@ -10,7 +10,7 @@ export async function newSchedule({ id, tutor, pet, desc, when}){
       body: JSON.stringify({ id, tutor, pet, desc, when}),
     });
 
-    alert("Agendamento realizado com sucesso!");
+    alert("Agendamento realizado com sucesso 🎉");
 
   } catch (error) {
     alert("Não foi possível realizar o agendamento! Tente novamente!");

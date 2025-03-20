@@ -1,10 +1,13 @@
 import dayjs from "dayjs";
+import { newSchedule } from "../../services/new-schedule.js";
+import { loadSchedulesDay } from "../schedules/load-schedules-day.js";
 
 const date = document.querySelector("#date");
 
 const form = document.querySelector("#form");
 const tutorName = document.querySelector("#tutor-name");
 const petName = document.querySelector("#pet-name");
+const phone = document.querySelector("#phone");
 const serviceDescription = document.querySelector("#description");
 const dateModal = document.querySelector("#date-modal");
 const hours = document.querySelector("#hours");
@@ -28,22 +31,27 @@ form.onsubmit = async (event) => {
 
     const hourSelected = hours.value;
     
-    if(hourSelected === "Selecione a hora" || !hourSelected){
-      return alert("Selecione a hora!");
-    }
+    if(hourSelected === "00:00" || !hourSelected) return alert("Selecione a hora!");
 
     const [hour] = hourSelected.split(":");
     const when = dayjs(dateModal.value).add(hour, "hour");
     
     const id = new Date().getTime().toString();
 
-    console.log({
+    await newSchedule({
       id,
       tutor,
       pet,
       desc,
       when,
     });
+
+    await loadSchedulesDay();
+
+    tutorName.value = "";
+    petName.value = "";
+    phone.value = "";
+    serviceDescription.value = "";
 
   } catch (error) {
     alert("Não foi possível realizar o agendamento!");
