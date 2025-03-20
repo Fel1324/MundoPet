@@ -2,9 +2,12 @@ import dayjs from "dayjs";
 import { newSchedule } from "../../services/new-schedule.js";
 import { loadSchedulesDay } from "../schedules/load-schedules-day.js";
 
-const date = document.querySelector("#date");
+const dateFilter = document.querySelector("#date");
 
 const form = document.querySelector("#form");
+const modal = document.querySelector("#modal");
+const footer = document.querySelector(".footer");
+
 const tutorName = document.querySelector("#tutor-name");
 const petName = document.querySelector("#pet-name");
 const phone = document.querySelector("#phone");
@@ -14,8 +17,8 @@ const hours = document.querySelector("#hours");
 
 const today = dayjs(new Date()).format("YYYY-MM-DD");
 
-date.value = today;
-date.min = today;
+dateFilter.value = today;
+dateFilter.min = today;
 dateModal.value = today;
 dateModal.min = today;
 
@@ -52,6 +55,9 @@ form.onsubmit = async (event) => {
     petName.value = "";
     phone.value = "";
     serviceDescription.value = "";
+
+    modal.style.display = "none";
+    footer.style.display = "initial";
 
   } catch (error) {
     alert("Não foi possível realizar o agendamento!");

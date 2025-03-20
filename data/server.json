@@ -1,32 +1,5 @@
 {
   "schedules": [
-    {
-      "id": "1742476922064",
-      "tutor": "Rafael",
-      "pet": "Boby",
-      "desc": "Banho",
-      "when": "2025-03-20T14:00:00.000Z"
-    },
-    {
-      "id": "1742477357276",
-      "tutor": "Gabs",
-      "pet": "Scobby",
-      "desc": "Banho e tosa",
-      "when": "2025-03-21T11:00:00.000Z"
-    },
-    {
-      "id": "1742477411768",
-      "tutor": "Rafael Oliveira",
-      "pet": "Boby",
-      "desc": "Banho",
-      "when": "2025-03-21T22:00:00.000Z"
-    },
-    {
-      "id": "1742477502970",
-      "tutor": "Gabriel",
-      "pet": "Tommy",
-      "desc": "Cortar unhas e perfumaria",
-      "when": "2025-03-20T22:00:00.000Z"
-    }
+
   ]
 }

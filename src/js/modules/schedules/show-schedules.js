@@ -30,7 +30,7 @@ export function showSchedules(dailySchedules){
   
       if(hour <= 12){
         morning.appendChild(item);
-      } else if(hour > 12 && hour <= 18){
+      } else if(hour > 12 && hour <= 17){
         afternoon.appendChild(item);
       } else {
         night.appendChild(item);

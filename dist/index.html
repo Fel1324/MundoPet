@@ -8,17 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mundo Pet | Agendamento de petshop</title>
     <link rel="shortcut icon" href="./src/assets/icons/dog.svg" type="image/svg+xml">
-    <link rel="icon" href="dog.svg"><script defer src="main.js"></script>
-  </head>
+  <link rel="icon" href="dog.svg"><script defer src="main.js"></script></head>
   <body>
     <img class="logo" src="./src/assets/logo.svg" alt="Logo Mundo Pet">
 
     <div id="app">
       <header class="header">
-        <h1>Sua agenda</h1>
-        <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+        <div>
+          <h1>Sua agenda</h1>
+          <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+        </div>
 
-        <label class="label" for="date">Data</label>
         <div class="input input-date">
           <img src="./src/assets/icons/calendar.svg" alt="">
           <input type="date" name="date" id="date" required>
@@ -30,71 +30,41 @@
           <header>
             <img src="./src/assets/icons/sun-fog.svg" alt="">
             <h2>Manhã</h2>
-            <span>09h-12h</span>
+            <span>08h-12h</span>
           </header>
 
-          <ul role="list" id="morning" class="period">
-            <li>
-              <strong class="hour">09:00</strong>
-              <strong>Thor</strong>
-            
-              <span>/ Fernanda Costa</span>
-              <span class="service-desc">Vacinação</span>
-
-              <button class="remove">Remover agendamento</button>
-            </li>
-          </ul>
+          <ul role="list" id="morning" class="period"></ul>
         </section>
 
         <section class="schedule-period">
           <header>
             <img src="./src/assets/icons/cloud-sun.svg" alt="">
             <h2>Tarde</h2>
-            <span>13h-18h</span>
+            <span>13h-17h</span>
           </header>
 
-          <ul role="list" id="afternoon" class="period">
-            <li>
-              <strong class="hour">13:00</strong>
-              <strong>Mel</strong>
-            
-              <span>/ João Souza</span>
-              <span class="service-desc">Corte de Unhas</span>
-
-              <button class="remove">Remover agendamento</button>
-            </li>
-          </ul>
+          <ul role="list" id="afternoon" class="period"></ul>
         </section>
 
         <section class="schedule-period">
           <header>
             <img src="./src/assets/icons/moon-stars.svg" alt="">
             <h2>Noite</h2>
-            <span>19h-21h</span>
+            <span>18h-19h</span>
           </header>
 
-          <ul role="list" id="night" class="period">
-            <li>
-              <strong class="hour">20:00</strong>
-              <strong>Max</strong>
-            
-              <span>/ Camila Santos</span>
-              <span class="service-desc">Limpeza de Dentes</span>
-
-              <button class="remove">Remover agendamento</button>
-            </li>
-          </ul>
+          <ul role="list" id="night" class="period"></ul>
         </section>
       </main>
     </div>
 
     <footer class="footer">
-      <button id="new-schedule" class="btn">Novo agendamento</button>
+      <button id="open-modal" class="btn">Novo agendamento</button>
     </footer>
 
     <aside id="modal">
       <form id="form">
-        <button id="close-modal" class="close-modal" aria-label="Fechar formulário">
+        <button type="button" id="close-modal" class="close-modal" aria-label="Fechar formulário">
           <img src="./src/assets/icons/close.svg" alt="">
         </button>
 
@@ -130,7 +100,7 @@
 
           <div class="textarea-group">
             <label class="label" for="description">Descrição do serviço</label>
-            <textarea name="description" id="description" placeholder="Banho e tosa" required></textarea>
+            <textarea name="description" id="description" placeholder="Banho e tosa" maxlength="72" required></textarea>
           </div>
 
           <div class="input-wrapper">
@@ -144,9 +114,11 @@
 
             <div class="input-group">
               <label class="label" for="hours">Hora</label>
-              <div class="input">
+              <div class="input select">
                 <img src="./src/assets/icons/clock.svg" alt="">
-                <input type="time" name="hours" id="hours" min="09:00" required>
+                 <select name="hours" id="hours">
+                  <!-- Conteúdo renderizado pelo JS -->
+                 </select>
               </div>
             </div>
           </div>

@@ -86,7 +86,8 @@
 
   .period li{
     display: grid;
-    grid-template-columns: 1.55fr 1fr 1fr;
+    gap: 2rem;
+    grid-template-columns: 1.45fr 1fr 1fr;
 
     & span.service-desc{
       margin-bottom: 0;
